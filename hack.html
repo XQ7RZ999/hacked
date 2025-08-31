@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Hacked</title>
+<meta name="author"contentّ"XQ7RZ">
+<link rel="icon" type="image/png" href="images.png">
+<style>
+  :root{
+    --bg:#000;
+    --red:#ff2b2b;
+    --muted:#ddd;
+  }
+  *{box-sizing:border-box}
+  html,body{height:100%;margin:0;background:radial-gradient(circle at center,#000 0%,#070707 80%);font-family:Inter, Arial, sans-serif;color:var(--muted)}
+  .wrap{min-height:100vh;display:flex;align-items:center;justify-content:center;padding:24px;}
+  .card{
+    width:100%;max-width:1000px;background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+    border-radius:14px;padding:24px;box-shadow:0 18px 60px rgba(0,0,0,0.7);position:relative;overflow:hidden;border:1px solid rgba(255,0,0,0.06)
+  }
+  .bg-skull{position:absolute;pointer-events:none;opacity:0.06;color:var(--red);font-size:220px;right:20px;bottom:8px;filter:blur(.5px);}
+  .float-skull{position:absolute;color:var(--red);opacity:0.06;font-size:160px;filter:blur(.6px);animation:floatX 18s linear infinite;}
+  .sk1{top:6%;left:4%;animation-duration:26s}
+  .sk2{top:28%;left:75%;font-size:120px;animation-duration:19s}
+  .sk3{top:62%;left:18%;font-size:140px;animation-duration:23s}
+  @keyframes floatX{0%{transform:translateY(0) rotate(0deg)}50%{transform:translateY(-40px) rotate(180deg)}100%{transform:translateY(0) rotate(360deg)}}
+
+  .header{display:flex;align-items:center;gap:14px;margin-bottom:12px}
+  .dot{width:14px;height:14px;border-radius:50%;background:var(--red);box-shadow:0 0 20px rgba(255,0,0,0.25)}
+  h1{margin:0;color:var(--red);font-size:24px;letter-spacing:.6px}
+  p.lead{margin:6px 0 18px 0;color:#fff;opacity:.95}
+
+  .grid{display:grid;grid-template-columns:1fr 360px;gap:18px}
+  .left{padding:12px}
+  .right{padding:14px;border-left:1px dashed rgba(255,255,255,0.03)}
+  .info{background:#060606;border-radius:10px;padding:12px;font-family:monospace;font-size:14px;color:#cfd;}
+  .info .line{padding:6px 0;border-bottom:1px dashed rgba(255,255,255,0.02)}
+  .info .label{color:var(--muted);font-size:12px;margin-right:8px}
+  .controls{margin-top:12px;display:flex;gap:8px;flex-wrap:wrap}
+  button{padding:10px 14px;border-radius:8px;border:1px solid rgba(255,255,255,0.04);background:rgba(0,0,0,0.6);color:#fff;cursor:pointer}
+  button.primary{background:linear-gradient(90deg, rgba(255,0,0,0.12), rgba(255,0,0,0.06));border-color:rgba(255,0,0,0.16)}
+  .flash{animation:flash 1s infinite;}
+  @keyframes flash{0%{text-shadow:0 0 6px rgba(255,0,0,0.6)}50%{text-shadow:0 0 14px rgba(255,0,0,0.95)}100%{text-shadow:0 0 6px rgba(255,0,0,0.6)}}
+
+  .small{font-size:13px;color:var(--muted)}
+  .note{margin-top:10px;font-size:13px;color:#bbb}
+  pre{white-space:pre-wrap;margin:0;font-family:monospace;font-size:13px;color:#dfe}
+  .ad-check{position: absolute; left:-9999px; top:-9999px; height:1px; width:1px; }
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="card" role="main" aria-live="polite">
+      <div class="bg-skull">☠</div>
+      <div class="float-skull sk1">☠</div>
+      <div class="float-skull sk2">☠</div>
+      <div class="float-skull sk3">☠</div>
+
+      <div class="header">
+        <div class="dot" aria-hidden></div>
+        <h1 class="flash">You Have Been Hacked</h1>
+      </div>
+
+      <p class="lead">Your Security System is Weak</p>
+
+      <div class="grid">
+        <div class="left">
+          <div class="info" id="info-box">
+            <div class="line"><span class="label">IP:</span> <span id="ip">Fetching...</span></div>
+            <div class="line"><span class="label">OS:</span> <span id="os">—</span></div>
+            <div class="line"><span class="label">Browser:</span> <span id="browser">—</span></div>
+            <div class="line"><span class="label">Screen:</span> <span id="screen">—</span></div>
+            <div class="line"><span class="label">Language:</span> <span id="lang">—</span></div>
+            <div class="line"><span class="label">Local date/time:</span> <span id="datetime">—</span></div>
+            <div class="line"><span class="label">Timezone:</span> <span id="tz">—</span></div>
+            <div class="line"><span class="label">CPU cores:</span> <span id="cores">—</span></div>
+            <div class="line"><span class="label">Approx. RAM (GB):</span> <span id="ram">—</span></div>
+            <div class="line"><span class="label">Device type:</span> <span id="devtype">—</span></div>
+            <div class="line"><span class="label">Plugins:</span> <span id="plugins">—</span></div>
+            <div class="line"><span class="label">AdBlock detected:</span> <span id="adblock">—</span></div>
+            <div class="line"><span class="label">Camera permission:</span> <span id="cam">—</span></div>
+            <div class="line"><span class="label">Microphone permission:</span> <span id="mic">—</span></div>
+          </div>
+
+          <div class="note">
+            <strong>Note:</strong> Your Security System is Weak
+          </div>
+        </div>
+
+        <aside class="right">
+          <div style="font-size:14px;color:#fff;margin-bottom:6px">Actions</div>
+          <div class="controls">
+            <button id="play" class="primary">Auto-play Hack Voice</button>
+            <button id="stop">Stop Voice</button>
+            <button id="recheck">Re-check Info</button>
+            <button id="copy">Copy Info</button>
+          </div>
+
+          <div style="margin-top:12px">
+            <div class="small">Hacked By XQ7RZ</div>
+          </div>
+
+          <div style="margin-top:16px">
+            <div style="font-size:13px;color:var(--muted)">Raw data (for demo):</div>
+            <pre id="raw" style="height:160px;overflow:auto;background:#060606;border-radius:8px;padding:10px;margin-top:8px;color:#cfe"></pre>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </div>
+
+  <div class="ad-check adsbygoogle" id="adtest"></div>
+  <audio loop id="hack-audio" preload="auto" src="hack-voice.wav"></audio>
+
+<script>
+(async function(){
+
+  function getOS(){
+    const p = navigator.platform || '';
+    const ua = navigator.userAgent || '';
+    const platform = p.toLowerCase();
+    const userAgent = ua.toLowerCase();
+    if(platform.indexOf('win') !== -1 || /windows/.test(userAgent)) return 'Windows';
+    if(platform.indexOf('mac') !== -1 || /macintosh|mac os x/.test(userAgent)) return 'MacOS';
+    if(/android/.test(userAgent)) return 'Android';
+    if(/iphone|ipad|ipod/.test(userAgent)) return 'iOS';
+    if(/linux/.test(userAgent)) return 'Linux';
+    return 'Unknown';
+  }
+  function getBrowser(){
+    const ua = navigator.userAgent;
+    if(/OPR|Opera/.test(ua)) return 'Opera';
+    if(/Edg\//.test(ua)) return 'Edge';
+    if(/Chrome\//.test(ua) && !/Edg\//.test(ua)) return 'Chrome';
+    if(/Firefox\//.test(ua)) return 'Firefox';
+    if(/Safari\//.test(ua) && !/Chrome\//.test(ua)) return 'Safari';
+    return 'Unknown';
+  }
+  function getScreenRes(){ return `${screen.width}x${screen.height}`; }
+  function getLocale(){ return navigator.language || navigator.userLanguage || 'Unknown'; }
+  function getTimezone(){try{const tz = Intl.DateTimeFormat().resolvedOptions().timeZone;return tz || 'Unknown';}catch(e){ return 'Unknown'; }}
+  function isMobile(){ const ua = navigator.userAgent || ''; return /Mobi|Android|iPhone|iPad|iPod/.test(ua); }
+  function getPlugins(){ try{const p = navigator.plugins;if(!p) return 'Not available';if(p.length === 0) return 'No plugins (or blocked)';const names = [];for(let i=0;i<p.length;i++){names.push(p[i].name);if(names.length >= 6) break;}return names.join(', ');}catch(e){ return 'Not available';}}
+  function detectAdBlock(){const el = document.getElementById('adtest');if(!el) return 'Unknown';const style = window.getComputedStyle(el);if(style && (style.display === 'none' || style.visibility === 'hidden' || el.offsetParent === null || el.offsetHeight===0)) return 'Likely yes';const bait = document.createElement('div');bait.className = 'pub_300x250 ad_unit adsbox';bait.style.width = '1px'; bait.style.height = '1px'; bait.style.position = 'absolute'; bait.style.left='-9999px';document.body.appendChild(bait);const bstyle = window.getComputedStyle(bait);const blocked = (bstyle && (bstyle.display === 'none' || bstyle.visibility === 'hidden' || bait.offsetHeight===0));document.body.removeChild(bait);return blocked ? 'Likely yes' : 'No';}
+  async function getPermissionState(name){if(!navigator.permissions || !navigator.permissions.query) return 'Not supported';try{const status = await navigator.permissions.query({name});return status.state;}catch(e){return 'Not supported';}}
+  async function gather(){const info = {};try{const resp = await fetch('https://api.ipify.org?format=json');const j = await resp.json();info.ip = j.ip;}catch(e){info.ip = 'Unavailable';}
+    info.os = getOS();info.browser = getBrowser();info.screen = getScreenRes();info.language = getLocale();info.datetime = new Date().toLocaleString();info.timezone = getTimezone();info.cores = (navigator.hardwareConcurrency || 'Unknown');info.ram = (navigator.deviceMemory ? navigator.deviceMemory + ' GB' : 'Unavailable');info.deviceType = isMobile() ? 'Mobile' : 'Desktop';info.plugins = getPlugins();info.adblock = detectAdBlock();info.cameraPerm = await getPermissionState('camera');info.microphonePerm = await getPermissionState('microphone');return info;}
+  async function updateUI(){const info = await gather();document.getElementById('ip').innerText = info.ip;document.getElementById('os').innerText = info.os;document.getElementById('browser').innerText = info.browser;document.getElementById('screen').innerText = info.screen;document.getElementById('lang').innerText = info.language;document.getElementById('datetime').innerText = info.datetime;document.getElementById('tz').innerText = info.timezone;document.getElementById('cores').innerText = info.cores;document.getElementById('ram').innerText = info.ram;document.getElementById('devtype').innerText = info.deviceType;document.getElementById('plugins').innerText = info.plugins;document.getElementById('adblock').innerText = info.adblock;document.getElementById('cam').innerText = info.cameraPerm;document.getElementById('mic').innerText = info.microphonePerm;document.getElementById('raw').innerText = JSON.stringify(info, null, 2);}
+  await updateUI();
+
+  document.getElementById('recheck').addEventListener('click', async ()=>{document.getElementById('raw').innerText = 'Re-checking...';await updateUI();});
+  document.getElementById('copy').addEventListener('click', ()=>{const txt = document.getElementById('raw').innerText;navigator.clipboard?.writeText(txt).then(()=>{ alert('Info copied to clipboard'); }).catch(()=>{ alert('Copy failed'); });});
+
+  const audio = document.getElementById('hack-audio');
+  const playBtn = document.getElementById('play');
+  const stopBtn = document.getElementById('stop');
+
+  async function tryAutoplay(){
+    if(!audio) return;
+    try{await audio.play();playBtn.innerText = 'Playing...';playBtn.disabled = true;}
+    catch(e){playBtn.innerText = 'Play Hack Voice (click to allow)';playBtn.disabled = false;}
+  }
+  setTimeout(tryAutoplay, 350);
+
+  playBtn.addEventListener('click', async ()=>{try{await audio.play();playBtn.innerText = 'Playing...';playBtn.disabled = true;}catch(e){alert('Playback failed — user gesture required or unsupported format.');}});
+  stopBtn.addEventListener('click', ()=>{audio.pause();audio.currentTime = 0;playBtn.innerText = 'Play Hack Voice';playBtn.disabled = false;});
+})();
+</script>
+</body>
+</html>
